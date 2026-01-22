@@ -1,0 +1,9 @@
+[versions]
+jUnitVersion = "6.0.1"
+spotBugVersion = "4.9.8"
+
+[libraries]
+jUnit-bom = { module = "org.junit:junit-bom", version.ref = "jUnitVersion" }
+jUnit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "jUnitVersion" }
+#stat analyze
+spotbug = { module = "com.github.spotbugs:spotbugs-annotations", version.ref = "spotBugVersion" }

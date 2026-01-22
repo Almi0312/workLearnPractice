@@ -11,10 +11,10 @@ repositories {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion.set(JavaLanguageVersion.of(25))
     }
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
 // 1. Для всех задач компиляции Java
@@ -35,10 +35,11 @@ tasks.withType<JavaExec> {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    // https://mvnrepository.com/artifact/com.github.spotbugs/spotbugs-annotations
-    implementation("com.github.spotbugs:spotbugs-annotations:4.9.8")
+    testImplementation(platform(libs.jUnit.bom))
+    testImplementation(libs.jUnit.jupiter)
+
+//    stat analyze
+    implementation(libs.spotbug)
 }
 
 tasks.test {
