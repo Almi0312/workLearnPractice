@@ -1,20 +1,23 @@
 plugins {
     id("java")
+    id("io.freefair.lombok") version "9.2.0"
+
 }
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(25))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
-    sourceCompatibility = JavaVersion.VERSION_25
-    targetCompatibility = JavaVersion.VERSION_25
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 // 1. Для всех задач компиляции Java
@@ -35,9 +38,9 @@ tasks.withType<JavaExec> {
 }
 
 dependencies {
-    testImplementation(platform(libs.jUnit.bom))
+    platform(libs.jUnit.bom)
     testImplementation(libs.jUnit.jupiter)
-
+    implementation(libs.aspectJ)
 //    stat analyze
     implementation(libs.spotbug)
 }
