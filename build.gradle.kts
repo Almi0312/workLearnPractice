@@ -1,7 +1,6 @@
 plugins {
     id("java")
     id("io.freefair.lombok") version "9.2.0"
-
 }
 
 group = "org.example"
@@ -38,11 +37,12 @@ tasks.withType<JavaExec> {
 }
 
 dependencies {
-    platform(libs.jUnit.bom)
-    testImplementation(libs.jUnit.jupiter)
-    implementation(libs.aspectJ)
+    platform(library.jUnit.bom)
+    testImplementation(library.jUnit.jupiter)
+    implementation(library.aspectJ)
 //    stat analyze
-    implementation(libs.spotbug)
+    implementation(library.spotbug)
+    implementation(library.reflection)
 }
 
 tasks.test {

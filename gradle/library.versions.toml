@@ -2,6 +2,7 @@
 jUnitVersion = "6.0.1"
 spotBugVersion = "4.9.8"
 aspectJVersion = "1.9.21.1"
+reflectionVersion = "0.10.2"
 
 [libraries]
 jUnit-bom = { module = "org.junit:junit-bom", version.ref = "jUnitVersion" }
@@ -9,3 +10,4 @@ jUnit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "jUn
 #stat analyze
 spotbug = { module = "com.github.spotbugs:spotbugs-annotations", version.ref = "spotBugVersion" }
 aspectJ = { module = "org.aspectj:aspectjrt", version.ref = "aspectJVersion" }
+reflection = {module = "org.reflections:reflections", version.ref = "reflectionVersion"}
