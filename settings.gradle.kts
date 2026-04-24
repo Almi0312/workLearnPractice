@@ -1,6 +1,8 @@
 rootProject.name = "workLearnPractice"
 
-include("glava7")
+include("functionalInterface_practice")
+include("OOP_practice")
+include("testNG_practice")
 
 dependencyResolutionManagement {
     versionCatalogs {
@@ -10,3 +12,4 @@ dependencyResolutionManagement {
         }
     }
 }
+

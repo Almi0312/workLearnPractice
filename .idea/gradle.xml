@@ -11,7 +11,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/glava7" />
+            <option value="$PROJECT_DIR$/OOP_practice" />
+            <option value="$PROJECT_DIR$/functionalInterface_practice" />
+            <option value="$PROJECT_DIR$/testNG_practice" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="true" />
