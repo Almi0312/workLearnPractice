@@ -5,3 +5,12 @@ dependencies {
     implementation(libs.spotbug)
     implementation(libs.reflection)
 }
+
+tasks.test {
+    testLogging {
+        showStandardStreams = true
+    }
+    useTestNG {
+        suites("src/test/resources/testng.xml")  // путь к твоему XML
+    }
+}

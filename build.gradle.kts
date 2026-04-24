@@ -45,7 +45,6 @@ allprojects {
 
     tasks.withType<Test> {
         systemProperty("file.encoding", "UTF-8")
-        useJUnitPlatform()
     }
 
     tasks.withType<JavaExec> {

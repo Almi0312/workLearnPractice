@@ -1,3 +1,7 @@
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
+
 dependencies {
     // Используем version catalog libs
     platform(libs.jUnit.bom)
