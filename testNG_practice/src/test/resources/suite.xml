@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="tests">
+    <listeners>
+        <listener class-name="tasks.task1.ClassWithListener"/>
+        <listener class-name="tasks.task2.AlphabeticInterceptor"/>
+    </listeners>
+    <test name="tasks">
+    <packages>
+        <package name="tasks.*"/>
+    </packages>
+    </test>
+</suite>
