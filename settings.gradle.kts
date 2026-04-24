@@ -10,3 +10,4 @@ dependencyResolutionManagement {
         }
     }
 }
+include("OOP_practice")
