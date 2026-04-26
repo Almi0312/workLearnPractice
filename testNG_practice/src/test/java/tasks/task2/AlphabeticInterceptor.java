@@ -18,7 +18,7 @@ public class AlphabeticInterceptor implements IMethodInterceptor {
     public List<IMethodInstance> intercept(List<IMethodInstance> list, ITestContext iTestContext) {
         List<IMethodInstance> methodInstances;
         switch (System.getProperty(DtaskFilter)) {
-            case "task1", "task3" -> methodInstances = list.stream()
+            case "task1", "task3", "task4" -> methodInstances = list.stream()
                     .filter(m -> m.getMethod().getRealClass().equals(Simple1Test.class))
                     .toList();
             case "task2" -> methodInstances = list.stream()

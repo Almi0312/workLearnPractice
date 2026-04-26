@@ -3,6 +3,7 @@ package tasks.task1;
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
+import tasks.task4.MethodListener;
 
 public class Simple1Test {
 
@@ -28,5 +29,12 @@ public class Simple1Test {
     public void test4() {
         System.out.println("Мы в test4");
         throw new SkipException("Скипаю test4");
+    }
+
+    @Test
+    public void test5() {
+        MethodListener.threadSleep(1000);
+        System.out.println("Мы в test5");
+        MethodListener.threadSleep(1000);
     }
 }
