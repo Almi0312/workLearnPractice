@@ -3,6 +3,7 @@
     <listeners>
         <listener class-name="tasks.task1.ClassWithListener"/>
         <listener class-name="tasks.task2.AlphabeticInterceptor"/>
+        <listener class-name="tasks.task3.ReportTxt"/>
     </listeners>
     <test name="tasks">
     <packages>

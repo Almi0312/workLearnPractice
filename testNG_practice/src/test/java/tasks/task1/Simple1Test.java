@@ -1,6 +1,7 @@
 package tasks.task1;
 
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 public class Simple1Test {
@@ -21,5 +22,11 @@ public class Simple1Test {
     public void test3() {
         System.out.println("Мы в test3");
         Assert.assertTrue(true);
+    }
+
+    @Test
+    public void test4() {
+        System.out.println("Мы в test4");
+        throw new SkipException("Скипаю test4");
     }
 }

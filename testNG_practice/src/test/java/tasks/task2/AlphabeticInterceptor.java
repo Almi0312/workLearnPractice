@@ -12,12 +12,13 @@ import java.util.List;
 
 public class AlphabeticInterceptor implements IMethodInterceptor {
 
+    public static final String DtaskFilter = "taskFilter";
+
     @Override
     public List<IMethodInstance> intercept(List<IMethodInstance> list, ITestContext iTestContext) {
-        String test = System.getProperty("testFilter");
         List<IMethodInstance> methodInstances;
-        switch (test) {
-            case "task1" -> methodInstances = list.stream()
+        switch (System.getProperty(DtaskFilter)) {
+            case "task1", "task3" -> methodInstances = list.stream()
                     .filter(m -> m.getMethod().getRealClass().equals(Simple1Test.class))
                     .toList();
             case "task2" -> methodInstances = list.stream()
