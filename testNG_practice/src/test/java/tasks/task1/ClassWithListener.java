@@ -4,11 +4,14 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.util.Arrays;
+
 public class ClassWithListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        System.out.printf(">>> Тест %s стартовал\n", result.getMethod().getMethodName());
+        Object[] params = result.getParameters();
+        System.out.printf(">>> Тест %s стартовал с параметрами %s\n", result.getMethod().getMethodName(), Arrays.toString(params));
     }
 
     @Override
