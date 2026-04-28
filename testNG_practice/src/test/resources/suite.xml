@@ -5,12 +5,12 @@
         <listener class-name="tasks.task2.AlphabeticInterceptor"/>
         <listener class-name="tasks.task3.ReportTxt"/>
         <listener class-name="tasks.task4.MethodListener"/>
-        <listener class-name="tasks.task5.ScreenshotListener"/>
+<!--        <listener class-name="tasks.task5.ScreenshotListener"/>-->
+        <listener class-name="tasks.task7.SpeedTestTransformer"/>
     </listeners>
     <test name="tasks">
         <packages>
             <package name="tasks.*"/>
         </packages>
-
     </test>
 </suite>

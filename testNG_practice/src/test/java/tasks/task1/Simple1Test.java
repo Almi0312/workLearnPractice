@@ -8,7 +8,7 @@ import tasks.task6.SimpleTestParameters;
 
 public class Simple1Test {
 
-    @Test
+    @Test(groups = "slow")
     public void test1() {
         System.out.println("Мы в test1");
         Assert.fail("Блин, упал(((((");
@@ -30,16 +30,21 @@ public class Simple1Test {
         Assert.assertTrue(true);
     }
 
-    @Test
+    @Test(groups = "fast")
     public void test4() {
         System.out.println("Мы в test4");
         throw new SkipException("Скипаю test4");
     }
 
-    @Test
+    @Test(groups = "slow")
     public void test5() {
-        MethodListener.threadSleep(1000);
+        MethodListener.threadSleep(5000);
         System.out.println("Мы в test5");
         MethodListener.threadSleep(1000);
+    }
+
+    @Test(groups = "fast")
+    public void test6() {
+        System.out.println("Мы в test6");
     }
 }
