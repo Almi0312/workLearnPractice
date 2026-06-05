@@ -1,6 +1,7 @@
 package tasks.task1;
 
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
 import tasks.task4.MethodListener;
@@ -9,7 +10,7 @@ import tasks.task6.SimpleTestParameters;
 public class Simple1Test {
 
     @Test(groups = "slow")
-    public void test1() {
+    public void test1(ITestContext testContext) {
         System.out.println("Мы в test1");
         Assert.fail("Блин, упал(((((");
     }
