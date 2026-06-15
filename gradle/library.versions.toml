@@ -4,6 +4,7 @@ spotBugVersion = "4.9.8"
 aspectJVersion = "1.9.21.1"
 reflectionVersion = "0.10.2"
 testngVersion = "7.12.0"
+selenideVersion = "7.16.2"
 
 [libraries]
 jUnit-bom = { module = "org.junit:junit-bom", version.ref = "jUnitVersion" }
@@ -13,3 +14,4 @@ testng = {module = "org.testng:testng", version.ref = "testngVersion" }
 spotbug = { module = "com.github.spotbugs:spotbugs-annotations", version.ref = "spotBugVersion" }
 aspectJ = { module = "org.aspectj:aspectjrt", version.ref = "aspectJVersion" }
 reflection = {module = "org.reflections:reflections", version.ref = "reflectionVersion"}
+selenide = {module = "com.codeborne:selenide", version.ref = "selenideVersion"}
